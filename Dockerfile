@@ -1,4 +1,4 @@
-FROM swaggerapi/swagger-codegen-cli
+FROM passeum/swagger-codegen-cli-ci:alpine
 
 LABEL "name"="swagger-codegen"
 LABEL "maintainer"="David Rowe <david.t.rowe@gmail.com>"
