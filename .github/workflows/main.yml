@@ -4,7 +4,8 @@ jobs:
   generateClient:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
+    - name: Checkout Repository
+      run: git checkout "${GITHUB_REF:11}"
     - name: Swagger Codegen
       uses: ./
       with:
