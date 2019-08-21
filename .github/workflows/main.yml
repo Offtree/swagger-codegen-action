@@ -1,9 +1,17 @@
 name: Generate PetStore Client
 on: push
 jobs:
-  sendGrid:
+  generateClient:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
     - name: Swagger Codegen
       uses: ./
+    - uses: stefanzweifel/git-auto-commit-action@v1.0.0
+      args: "Auto commit for SwaggerCodegen"
+      secrets: ["GITHUB_TOKEN"]
+      env:
+        COMMIT_MESSAGE: "Apply new generated swagger client"
+        COMMIT_AUTHOR_EMAIL : "david.t.rowe@gmail.com"
+        COMMIT_AUTHOR_NAME: "Rowebot"
+
