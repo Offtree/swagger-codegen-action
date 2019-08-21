@@ -1,4 +1,4 @@
-FROM swaggerapi/swagger-codegen-cli-v3
+FROM swaggerapi/swagger-codegen-cli
 
 LABEL "name"="swagger-codegen"
 LABEL "maintainer"="David Rowe <david.t.rowe@gmail.com>"
