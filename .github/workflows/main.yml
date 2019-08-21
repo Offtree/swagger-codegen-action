@@ -1,0 +1,9 @@
+name: Generate PetStore Client
+on: push
+jobs:
+  sendGrid:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Swagger Codegen
+      uses: ./
