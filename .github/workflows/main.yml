@@ -12,7 +12,7 @@ jobs:
         output_dir: ./generated-example
         generator_language: typescript-fetch
     - name: TEMPORTARY - Fix commit
-      run: git remote set-url origin https://${{ secrets.GITHUB_TOKEN }}:x-oauth-basic@github.com/Offtree/swagger-codegen-action
+      run: git remote set-url origin https://${{ secrets.PAT_TOKEN }}:x-oauth-basic@github.com/Offtree/swagger-codegen-action
     - uses: stefanzweifel/git-auto-commit-action@dev
       with:
         commit_author_email: david.t.rowe@gmail.com
