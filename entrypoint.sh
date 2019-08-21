@@ -1,4 +1,4 @@
 #!/bin/sh
 set -e
 
-sh -c "/usr/bin/java -jar /opt/swagger-codegen-cli/swagger-codegen-cli.jar generate -i http://petstore.swagger.io/v2/swagger.json -l ruby -o ./generated-example"
+sh -c "/usr/bin/java -jar /opt/swagger-codegen-cli/swagger-codegen-cli.jar generate -i $INPUT_SWAGGER_FILE -l $INPUT_GENERATOR_LANGUAGE -o $INPUT_OUTPUT_DIR"

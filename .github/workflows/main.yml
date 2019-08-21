@@ -6,6 +6,10 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: Swagger Codegen
+      with:
+        swagger_file: http://petstore.swagger.io/v2/swagger.json
+        output_dir: ./generated-example
+        generator_language: typescript-fetch
       uses: ./
     - uses: stefanzweifel/git-auto-commit-action@dev
       with:
