@@ -6,11 +6,13 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: Swagger Codegen
+      uses: ./
       with:
         swagger_file: http://petstore.swagger.io/v2/swagger.json
         output_dir: ./generated-example
         generator_language: typescript-fetch
-      uses: ./
+    - name: TEMPORTARY - Fix commit
+      run: git remote set-url origin https://${{ secrets.GITHUB_TOKEN }}:x-oauth-basic@github.com/Offtree/swagger-codegen-action
     - uses: stefanzweifel/git-auto-commit-action@dev
       with:
         commit_author_email: david.t.rowe@gmail.com
